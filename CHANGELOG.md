@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 – 2026-10-29
+
+- No design skins are preconfigured any more; skins come from Klimadashboard (`/api/skins`) or the
+  `skins` setting.
+- Neutral example content in the documentation and screenshots.
+
 ## 1.0.0 – 2026-10-29
 
 First release.

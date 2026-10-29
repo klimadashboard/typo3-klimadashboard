@@ -41,8 +41,9 @@ Extension configuration
         -   `DE,AT`
         -   Countries offered in the region select.
     *   -   `skins`
-        -   `metropolregion-nuernberg:…`
-        -   Design skins offered, as `id:Label`, comma separated.
+        -   (empty)
+        -   Additional design skins, as `id:Label`, comma separated, e.g.
+            `my-skin:My organisation`.
     *   -   `fetchSkins`
         -   on
         -   Also load the list of skins from Klimadashboard.
@@ -63,7 +64,7 @@ a skin and the site, and remove options editors should not use:
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     TCAdefaults.tt_content {
-        tx_klimadashboard_skin = metropolregion-nuernberg
+        tx_klimadashboard_skin = my-skin
         tx_klimadashboard_site = de
     }
     TCEFORM.tt_content.tx_klimadashboard_site.removeItems = at,org

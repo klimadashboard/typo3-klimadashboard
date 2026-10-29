@@ -72,7 +72,7 @@ frames and layouts follow your site.
 | `cacheLifetime` | `14400` | Cache lifetime of API responses (s) |
 | `excludeChartTypes` | `test*` | Chart types hidden from the picker |
 | `regionLayers` / `regionCountries` | `group,state,district` / `DE,AT` | Regions offered in the region select |
-| `skins` | `metropolregion-nuernberg:…` | Skins offered (`id:Label`, comma separated) |
+| `skins` | (empty) | Additional skins (`id:Label`, comma separated, e.g. `my-skin:My organisation`) |
 | `fetchSkins` | on | Also load the skin list from `GET <defaultSite>/api/skins` |
 | `consent` | off | Two-click mode for all elements (elements can override) |
 | `privacyUrl` | Klimadashboard privacy policy | Linked in the click-to-load notice |
@@ -80,7 +80,7 @@ frames and layouts follow your site.
 Per site, use Page TSconfig, e.g. to preselect a skin and remove options:
 
 ```
-TCAdefaults.tt_content.tx_klimadashboard_skin = metropolregion-nuernberg
+TCAdefaults.tt_content.tx_klimadashboard_skin = my-skin
 TCEFORM.tt_content.tx_klimadashboard_site.removeItems = at,org
 ```
 
@@ -112,7 +112,7 @@ configured list. Existing elements keep their stored values.
 Requirements: [DDEV](https://ddev.com) with a Docker provider (e.g. Colima, OrbStack or Docker Desktop).
 The DDEV project lives in the repository root. There is one TYPO3 composer project per supported version:
 `dev/v14` (TYPO3 14.3, PHP 8.4), `dev/v13` (13.4, PHP 8.3), `dev/v12` (12.4, PHP 8.2) and `dev/v11` (11.5,
-PHP 8.1, the version of the Metropolregion Nürnberg website). All
+PHP 8.1). All
 install this extension from `../../` as a symlinked path repository, together with a minimal site package
 (`dev/packages/demo_site`).
 

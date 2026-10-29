@@ -13,5 +13,5 @@
                interlink-shortcode="klimadashboard/typo3-klimadashboard"
                typo3-core-preferred="stable"
     />
-    <project title="Klimadashboard" release="1.0.0" version="1.0" copyright="since 2026 by Klimadashboard"/>
+    <project title="Klimadashboard" release="1.0.1" version="1.0" copyright="since 2026 by Klimadashboard"/>
 </guides>

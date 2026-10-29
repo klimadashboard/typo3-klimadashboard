@@ -19,7 +19,7 @@ regionLayers = group,state,district
 regionCountries = DE,AT
 
 # cat=Skins; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.skins
-skins = metropolregion-nuernberg:Metropolregion Nürnberg · Klimapakt2030plus
+skins =
 # cat=Skins; type=boolean; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.fetchSkins
 fetchSkins = 1
 
