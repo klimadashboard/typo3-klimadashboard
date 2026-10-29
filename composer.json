@@ -1,0 +1,37 @@
+{
+	"name": "klimadashboard/typo3-klimadashboard",
+	"type": "typo3-cms-extension",
+	"description": "Embed charts from Klimadashboard (klimadashboard.de / .at / .org) as TYPO3 content elements: chart picker, region, language, design skin, auto-height, DSGVO-friendly.",
+	"keywords": ["TYPO3", "extension", "klimadashboard", "climate", "charts", "embed"],
+	"homepage": "https://klimadashboard.org",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{ "name": "Klimadashboard", "email": "team@klimadashboard.org", "homepage": "https://klimadashboard.org", "role": "Developer" }
+	],
+	"support": {
+		"email": "team@klimadashboard.org"
+	},
+	"require": {
+		"php": "^7.4 || ^8.0",
+		"typo3/cms-core": "^11.5 || ^12.4 || ^13.4 || ^14.3",
+		"typo3/cms-backend": "^11.5 || ^12.4 || ^13.4 || ^14.3",
+		"typo3/cms-frontend": "^11.5 || ^12.4 || ^13.4 || ^14.3",
+		"typo3/cms-fluid-styled-content": "^11.5 || ^12.4 || ^13.4 || ^14.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Klimadashboard\\Typo3\\": "Classes/"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "klimadashboard"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		}
+	}
+}

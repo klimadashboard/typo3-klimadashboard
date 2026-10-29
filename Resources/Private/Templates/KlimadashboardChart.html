@@ -1,0 +1,53 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <f:if condition="{klimadashboard.url}">
+        <f:asset.css identifier="klimadashboard" href="EXT:klimadashboard/Resources/Public/Css/embed.css" />
+        <f:asset.script identifier="klimadashboard" src="EXT:klimadashboard/Resources/Public/JavaScript/embed.js" defer="1" />
+
+        <div class="klimadashboard-embed" data-klimadashboard-origins="{klimadashboard.origins}">
+            <f:if condition="{klimadashboard.consent}">
+                <f:then>
+                    <div class="klimadashboard-embed__consent" data-klimadashboard-consent>
+                        <p class="klimadashboard-embed__consent-title">{klimadashboard.title -> f:or(alternative: '{f:translate(key: \'LLL:EXT:klimadashboard/Resources/Private/Language/locallang.xlf:frame.title\')}')}</p>
+                        <p>{f:translate(key: 'LLL:EXT:klimadashboard/Resources/Private/Language/locallang.xlf:consent.text', arguments: {0: klimadashboard.host})}</p>
+                        <p class="klimadashboard-embed__consent-actions">
+                            <button type="button" class="klimadashboard-embed__button" data-klimadashboard-load>
+                                {f:translate(key: 'LLL:EXT:klimadashboard/Resources/Private/Language/locallang.xlf:consent.button')}
+                            </button>
+                            <f:if condition="{klimadashboard.privacyUrl}">
+                                <a href="{klimadashboard.privacyUrl}" target="_blank" rel="noopener noreferrer">{f:translate(key: 'LLL:EXT:klimadashboard/Resources/Private/Language/locallang.xlf:consent.privacy')}</a>
+                            </f:if>
+                        </p>
+                        <noscript>
+                            <p><a href="{klimadashboard.url}" target="_blank" rel="noopener noreferrer">{f:translate(key: 'LLL:EXT:klimadashboard/Resources/Private/Language/locallang.xlf:open', arguments: {0: klimadashboard.host})}</a></p>
+                        </noscript>
+                    </div>
+                    <template data-klimadashboard-template>
+                        <f:render section="Frame" arguments="{_all}" />
+                    </template>
+                </f:then>
+                <f:else>
+                    <f:render section="Frame" arguments="{_all}" />
+                </f:else>
+            </f:if>
+        </div>
+    </f:if>
+</f:section>
+
+<f:section name="Frame">
+    <iframe
+        class="klimadashboard-embed__frame"
+        src="{klimadashboard.url}"
+        title="{klimadashboard.title -> f:or(alternative: '{f:translate(key: \'LLL:EXT:klimadashboard/Resources/Private/Language/locallang.xlf:frame.title\')}')}"
+        lang="{klimadashboard.language}"
+        width="100%"
+        height="{klimadashboard.height}"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="fullscreen"
+        {f:if(condition: klimadashboard.autoHeight, then: 'data-klimadashboard-auto')}
+    ></iframe>
+</f:section>
+</html>

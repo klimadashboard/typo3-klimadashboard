@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.plugins {
+    elements {
+        klimadashboard_chart {
+            iconIdentifier = klimadashboard-chart
+            title = LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:ctype.klimadashboard_chart
+            description = LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:ctype.klimadashboard_chart.description
+            tt_content_defValues {
+                CType = klimadashboard_chart
+            }
+        }
+    }
+    show := addToList(klimadashboard_chart)
+}

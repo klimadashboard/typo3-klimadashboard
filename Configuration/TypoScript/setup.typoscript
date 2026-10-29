@@ -1,0 +1,8 @@
+# Klimadashboard chart content element (requires fluid_styled_content)
+tt_content.klimadashboard_chart =< lib.contentElement
+tt_content.klimadashboard_chart {
+    templateName = KlimadashboardChart
+    templateRootPaths.1730 = EXT:klimadashboard/Resources/Private/Templates/
+    dataProcessing.1730 = Klimadashboard\Typo3\DataProcessing\EmbedProcessor
+    dataProcessing.1730.as = klimadashboard
+}

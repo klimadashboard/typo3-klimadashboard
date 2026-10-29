@@ -1,0 +1,4 @@
+name: klimadashboard/klimadashboard
+label: Klimadashboard
+dependencies:
+  - typo3/fluid-styled-content

@@ -1,0 +1,28 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  Klimadashboard\Typo3\:
+    resource: '../Classes/*'
+
+  # Instantiated via GeneralUtility::makeInstance() by FormEngine, DataHandler and TypoScript
+  Klimadashboard\Typo3\Service\Settings:
+    public: true
+  Klimadashboard\Typo3\Service\KlimadashboardApi:
+    public: true
+  Klimadashboard\Typo3\Service\EmbedUrlBuilder:
+    public: true
+  Klimadashboard\Typo3\Form\ItemsProcFunc:
+    public: true
+  Klimadashboard\Typo3\DataProcessing\EmbedProcessor:
+    public: true
+  Klimadashboard\Typo3\Hooks\DataHandlerHook:
+    public: true
+  Klimadashboard\Typo3\Form\Element\EmbedOptionsElement:
+    public: true
+    shared: false
+  Klimadashboard\Typo3\Preview\ChartPreviewRenderer:
+    public: true
+    shared: false

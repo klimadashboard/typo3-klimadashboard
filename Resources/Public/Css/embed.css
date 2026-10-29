@@ -1,0 +1,49 @@
+/* Klimadashboard TYPO3 extension. Override the custom properties in your site CSS. */
+.klimadashboard-embed {
+	--klimadashboard-consent-bg: #f3f4f6;
+	--klimadashboard-consent-color: #1f2937;
+	--klimadashboard-button-bg: #1f6f5c;
+	--klimadashboard-button-color: #ffffff;
+	--klimadashboard-focus: #1f2937;
+}
+
+.klimadashboard-embed__frame {
+	display: block;
+	width: 100%;
+	border: 0;
+}
+
+.klimadashboard-embed__consent {
+	padding: 1.5rem;
+	background: var(--klimadashboard-consent-bg);
+	color: var(--klimadashboard-consent-color);
+	border-radius: 0.5rem;
+}
+
+.klimadashboard-embed__consent-title {
+	font-weight: 700;
+}
+
+.klimadashboard-embed__consent-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 0;
+}
+
+.klimadashboard-embed__button {
+	padding: 0.6rem 1.2rem;
+	border: 0;
+	border-radius: 0.35rem;
+	background: var(--klimadashboard-button-bg);
+	color: var(--klimadashboard-button-color);
+	font: inherit;
+	cursor: pointer;
+}
+
+.klimadashboard-embed__button:focus-visible,
+.klimadashboard-embed__consent a:focus-visible {
+	outline: 3px solid var(--klimadashboard-focus);
+	outline-offset: 2px;
+}

@@ -1,0 +1,34 @@
+{
+	"name": "klimadashboard/typo3-klimadashboard-dev",
+	"description": "Local TYPO3 test environment for the Klimadashboard extension (DDEV)",
+	"type": "project",
+	"license": "GPL-2.0-or-later",
+	"repositories": [
+		{ "type": "path", "url": "../", "options": { "symlink": true } },
+		{ "type": "path", "url": "packages/*", "options": { "symlink": true } }
+	],
+	"require": {
+		"klimadashboard/typo3-klimadashboard": "@dev",
+		"klimadashboard/demo-site": "@dev",
+		"typo3/cms-backend": "^14.3",
+		"typo3/cms-belog": "^14.3",
+		"typo3/cms-core": "^14.3",
+		"typo3/cms-extbase": "^14.3",
+		"typo3/cms-fluid": "^14.3",
+		"typo3/cms-fluid-styled-content": "^14.3",
+		"typo3/cms-frontend": "^14.3",
+		"typo3/cms-install": "^14.3",
+		"typo3/cms-lowlevel": "^14.3",
+		"typo3/cms-setup": "^14.3",
+		"typo3/cms-tstemplate": "^14.3"
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"config": {
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"sort-packages": true
+	}
+}

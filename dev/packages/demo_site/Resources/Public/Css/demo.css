@@ -1,0 +1,4 @@
+body { margin: 0; font-family: system-ui, sans-serif; color: #1f2937; background: #fff; line-height: 1.5; }
+.demo { max-width: 960px; margin: 0 auto; padding: 2rem 16px 4rem; }
+.demo > h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.frame { margin: 2.5rem 0; }

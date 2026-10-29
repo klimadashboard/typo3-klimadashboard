@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" target-language="de" datatype="plaintext" original="EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf" product-name="klimadashboard">
+		<header/>
+		<body>
+			<trans-unit id="ctype.klimadashboard_chart" resname="ctype.klimadashboard_chart" approved="yes">
+				<source>Klimadashboard chart</source>
+				<target>Klimadashboard-Grafik</target>
+			</trans-unit>
+			<trans-unit id="ctype.klimadashboard_chart.description" resname="ctype.klimadashboard_chart.description" approved="yes">
+				<source>Embed a chart from klimadashboard.de, .at or .org.</source>
+				<target>Bindet eine Grafik von klimadashboard.de, .at oder .org ein.</target>
+			</trans-unit>
+			<trans-unit id="tab.chart" resname="tab.chart" approved="yes">
+				<source>Chart</source>
+				<target>Grafik</target>
+			</trans-unit>
+			<trans-unit id="palette.source" resname="palette.source" approved="yes">
+				<source>Source</source>
+				<target>Quelle</target>
+			</trans-unit>
+			<trans-unit id="palette.region" resname="palette.region" approved="yes">
+				<source>Region</source>
+				<target>Region</target>
+			</trans-unit>
+			<trans-unit id="palette.display" resname="palette.display" approved="yes">
+				<source>Display</source>
+				<target>Darstellung</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_site" resname="tt_content.tx_klimadashboard_site" approved="yes">
+				<source>Klimadashboard site</source>
+				<target>Klimadashboard-Seite</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_site.description" resname="tt_content.tx_klimadashboard_site.description" approved="yes">
+				<source>Which Klimadashboard the chart is loaded from. Some charts exist only on one site.</source>
+				<target>Von welchem Klimadashboard die Grafik geladen wird. Manche Grafiken gibt es nur auf einer Seite.</target>
+			</trans-unit>
+			<trans-unit id="site.default" resname="site.default" approved="yes">
+				<source>Default (extension configuration)</source>
+				<target>Standard (Erweiterungskonfiguration)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_chart" resname="tt_content.tx_klimadashboard_chart" approved="yes">
+				<source>Chart</source>
+				<target>Grafik</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_chart.description" resname="tt_content.tx_klimadashboard_chart.description" approved="yes">
+				<source>List loaded from Klimadashboard and cached.</source>
+				<target>Liste wird von Klimadashboard geladen und zwischengespeichert.</target>
+			</trans-unit>
+			<trans-unit id="chart.select" resname="chart.select" approved="yes">
+				<source>– Please select a chart –</source>
+				<target>– Bitte Grafik auswählen –</target>
+			</trans-unit>
+			<trans-unit id="chart.group.site" resname="chart.group.site" approved="yes">
+				<source>Charts for this site</source>
+				<target>Grafiken für diese Seite</target>
+			</trans-unit>
+			<trans-unit id="chart.group.general" resname="chart.group.general" approved="yes">
+				<source>Charts for all sites</source>
+				<target>Grafiken für alle Seiten</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_language" resname="tt_content.tx_klimadashboard_language" approved="yes">
+				<source>Language</source>
+				<target>Sprache</target>
+			</trans-unit>
+			<trans-unit id="language.page" resname="language.page" approved="yes">
+				<source>Same as page</source>
+				<target>Wie Seite</target>
+			</trans-unit>
+			<trans-unit id="language.de" resname="language.de" approved="yes">
+				<source>German</source>
+				<target>Deutsch</target>
+			</trans-unit>
+			<trans-unit id="language.en" resname="language.en" approved="yes">
+				<source>English</source>
+				<target>Englisch</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_region" resname="tt_content.tx_klimadashboard_region" approved="yes">
+				<source>Region</source>
+				<target>Region</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_region.description" resname="tt_content.tx_klimadashboard_region.description" approved="yes">
+				<source>Preselects a region for charts with regional data.</source>
+				<target>Wählt bei Grafiken mit regionalen Daten eine Region vor.</target>
+			</trans-unit>
+			<trans-unit id="region.none" resname="region.none" approved="yes">
+				<source>None (chart default)</source>
+				<target>Keine (Standard der Grafik)</target>
+			</trans-unit>
+			<trans-unit id="region.group.group" resname="region.group.group" approved="yes">
+				<source>Regional associations</source>
+				<target>Regionsverbünde</target>
+			</trans-unit>
+			<trans-unit id="region.group.state" resname="region.group.state" approved="yes">
+				<source>States</source>
+				<target>Bundesländer</target>
+			</trans-unit>
+			<trans-unit id="region.group.district" resname="region.group.district" approved="yes">
+				<source>Districts and independent cities</source>
+				<target>Landkreise und kreisfreie Städte</target>
+			</trans-unit>
+			<trans-unit id="region.group.other" resname="region.group.other" approved="yes">
+				<source>Other</source>
+				<target>Weitere</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_region_custom" resname="tt_content.tx_klimadashboard_region_custom" approved="yes">
+				<source>Other region (ID)</source>
+				<target>Andere Region (ID)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_region_custom.description" resname="tt_content.tx_klimadashboard_region_custom.description" approved="yes">
+				<source>Optional, e.g. for municipalities. Overrides the selection.</source>
+				<target>Optional, z. B. für Gemeinden. Hat Vorrang vor der Auswahl.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_skin" resname="tt_content.tx_klimadashboard_skin" approved="yes">
+				<source>Design skin</source>
+				<target>Design-Skin</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_skin.description" resname="tt_content.tx_klimadashboard_skin.description" approved="yes">
+				<source>Fonts, accent colour and logos of the embed.</source>
+				<target>Schriften, Akzentfarbe und Logos der Einbettung.</target>
+			</trans-unit>
+			<trans-unit id="skin.default" resname="skin.default" approved="yes">
+				<source>Klimadashboard (default)</source>
+				<target>Klimadashboard (Standard)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_options" resname="tt_content.tx_klimadashboard_options" approved="yes">
+				<source>Chart options</source>
+				<target>Grafik-Optionen</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_options.description" resname="tt_content.tx_klimadashboard_options.description" approved="yes">
+				<source>Settings offered by the selected chart.</source>
+				<target>Einstellungen, die die gewählte Grafik anbietet.</target>
+			</trans-unit>
+			<trans-unit id="options.selectChart" resname="options.selectChart" approved="yes">
+				<source>Select a chart and save to see its options.</source>
+				<target>Grafik auswählen, dann werden ihre Optionen angezeigt.</target>
+			</trans-unit>
+			<trans-unit id="options.none" resname="options.none" approved="yes">
+				<source>This chart has no further options.</source>
+				<target>Diese Grafik hat keine weiteren Optionen.</target>
+			</trans-unit>
+			<trans-unit id="options.default" resname="options.default" approved="yes">
+				<source>Default (%s)</source>
+				<target>Standard (%s)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_hidetext" resname="tt_content.tx_klimadashboard_hidetext" approved="yes">
+				<source>Hide explanatory text</source>
+				<target>Begleittext ausblenden</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_height" resname="tt_content.tx_klimadashboard_height" approved="yes">
+				<source>Fixed height (px)</source>
+				<target>Feste Höhe (px)</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_height.description" resname="tt_content.tx_klimadashboard_height.description" approved="yes">
+				<source>0 = height adapts to the chart automatically.</source>
+				<target>0 = Höhe passt sich automatisch an die Grafik an.</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_consent" resname="tt_content.tx_klimadashboard_consent" approved="yes">
+				<source>Load on click</source>
+				<target>Erst nach Klick laden</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_consent.description" resname="tt_content.tx_klimadashboard_consent.description" approved="yes">
+				<source>Shows a privacy notice and loads the chart only after a click.</source>
+				<target>Zeigt einen Datenschutzhinweis und lädt die Grafik erst nach einem Klick.</target>
+			</trans-unit>
+			<trans-unit id="consent.inherit" resname="consent.inherit" approved="yes">
+				<source>Default (extension configuration)</source>
+				<target>Standard (Erweiterungskonfiguration)</target>
+			</trans-unit>
+			<trans-unit id="consent.on" resname="consent.on" approved="yes">
+				<source>Yes</source>
+				<target>Ja</target>
+			</trans-unit>
+			<trans-unit id="consent.off" resname="consent.off" approved="yes">
+				<source>No, load directly</source>
+				<target>Nein, direkt laden</target>
+			</trans-unit>
+			<trans-unit id="item.unavailable" resname="item.unavailable" approved="yes">
+				<source>[not available: %s]</source>
+				<target>[nicht verfügbar: %s]</target>
+			</trans-unit>
+			<trans-unit id="preview.noChart" resname="preview.noChart" approved="yes">
+				<source>No chart selected</source>
+				<target>Keine Grafik ausgewählt</target>
+			</trans-unit>
+			<trans-unit id="extconf.baseUrlDe" resname="extconf.baseUrlDe" approved="yes">
+				<source>URL of klimadashboard.de</source>
+				<target>URL von klimadashboard.de</target>
+			</trans-unit>
+			<trans-unit id="extconf.baseUrlAt" resname="extconf.baseUrlAt" approved="yes">
+				<source>URL of klimadashboard.at</source>
+				<target>URL von klimadashboard.at</target>
+			</trans-unit>
+			<trans-unit id="extconf.baseUrlOrg" resname="extconf.baseUrlOrg" approved="yes">
+				<source>URL of klimadashboard.org</source>
+				<target>URL von klimadashboard.org</target>
+			</trans-unit>
+			<trans-unit id="extconf.defaultSite" resname="extconf.defaultSite" approved="yes">
+				<source>Default Klimadashboard site</source>
+				<target>Standard-Klimadashboard-Seite</target>
+			</trans-unit>
+			<trans-unit id="extconf.directusUrl" resname="extconf.directusUrl" approved="yes">
+				<source>Klimadashboard data API (Directus)</source>
+				<target>Klimadashboard-Daten-API (Directus)</target>
+			</trans-unit>
+			<trans-unit id="extconf.cacheLifetime" resname="extconf.cacheLifetime" approved="yes">
+				<source>Cache lifetime of API responses in seconds</source>
+				<target>Cache-Dauer der API-Antworten in Sekunden</target>
+			</trans-unit>
+			<trans-unit id="extconf.regionLayers" resname="extconf.regionLayers" approved="yes">
+				<source>Region levels offered in the region select (group, state, district, municipality)</source>
+				<target>Angebotene Regionsebenen (group, state, district, municipality)</target>
+			</trans-unit>
+			<trans-unit id="extconf.regionCountries" resname="extconf.regionCountries" approved="yes">
+				<source>Countries offered in the region select</source>
+				<target>Angebotene Länder in der Regionsauswahl</target>
+			</trans-unit>
+			<trans-unit id="extconf.skins" resname="extconf.skins" approved="yes">
+				<source>Design skins (id:Label, comma separated); merged with the list from Klimadashboard</source>
+				<target>Design-Skins (id:Bezeichnung, kommagetrennt); ergänzt die Liste von Klimadashboard</target>
+			</trans-unit>
+			<trans-unit id="extconf.fetchSkins" resname="extconf.fetchSkins" approved="yes">
+				<source>Load available skins from Klimadashboard (/api/skins)</source>
+				<target>Verfügbare Skins von Klimadashboard laden (/api/skins)</target>
+			</trans-unit>
+			<trans-unit id="extconf.consent" resname="extconf.consent" approved="yes">
+				<source>Load charts only after a click (two-click privacy mode) by default</source>
+				<target>Grafiken standardmäßig erst nach Klick laden (Zwei-Klick-Lösung)</target>
+			</trans-unit>
+			<trans-unit id="extconf.privacyUrl" resname="extconf.privacyUrl" approved="yes">
+				<source>Privacy policy linked in the click-to-load notice</source>
+				<target>Datenschutzerklärung, die im Hinweis verlinkt wird</target>
+			</trans-unit>
+			<trans-unit id="extconf.excludeChartTypes" resname="extconf.excludeChartTypes" approved="yes">
+				<source>Chart types hidden from the chart select (comma separated, wildcards allowed)</source>
+				<target>In der Grafikauswahl ausgeblendete Grafiktypen (kommagetrennt, Platzhalter erlaubt)</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

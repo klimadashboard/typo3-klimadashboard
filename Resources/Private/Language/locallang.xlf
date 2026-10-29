@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:klimadashboard/Resources/Private/Language/locallang.xlf" product-name="klimadashboard">
+		<header/>
+		<body>
+			<trans-unit id="frame.title" resname="frame.title">
+				<source>Klimadashboard chart</source>
+			</trans-unit>
+			<trans-unit id="consent.text" resname="consent.text">
+				<source>This chart is loaded from %s. Loading it transmits your IP address to the operator. No cookies are set.</source>
+			</trans-unit>
+			<trans-unit id="consent.button" resname="consent.button">
+				<source>Load chart</source>
+			</trans-unit>
+			<trans-unit id="consent.privacy" resname="consent.privacy">
+				<source>Privacy policy</source>
+			</trans-unit>
+			<trans-unit id="open" resname="open">
+				<source>Open chart on %s</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

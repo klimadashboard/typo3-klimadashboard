@@ -1,0 +1,29 @@
+# cat=Sites; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.baseUrlDe
+baseUrlDe = https://klimadashboard.de
+# cat=Sites; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.baseUrlAt
+baseUrlAt = https://klimadashboard.at
+# cat=Sites; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.baseUrlOrg
+baseUrlOrg = https://klimadashboard.org
+# cat=Sites; type=options[de,at,org]; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.defaultSite
+defaultSite = de
+
+# cat=API; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.directusUrl
+directusUrl = https://base.klimadashboard.org
+# cat=API; type=int+; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.cacheLifetime
+cacheLifetime = 14400
+# cat=API; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.excludeChartTypes
+excludeChartTypes = test*
+# cat=API; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.regionLayers
+regionLayers = group,state,district
+# cat=API; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.regionCountries
+regionCountries = DE,AT
+
+# cat=Skins; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.skins
+skins = metropolregion-nuernberg:Metropolregion Nürnberg · Klimapakt2030plus
+# cat=Skins; type=boolean; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.fetchSkins
+fetchSkins = 1
+
+# cat=Privacy; type=boolean; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.consent
+consent = 0
+# cat=Privacy; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.privacyUrl
+privacyUrl = https://klimadashboard.org/datenschutz

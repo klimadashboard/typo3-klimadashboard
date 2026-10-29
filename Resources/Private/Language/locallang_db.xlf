@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" datatype="plaintext" original="EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf" product-name="klimadashboard">
+		<header/>
+		<body>
+			<trans-unit id="ctype.klimadashboard_chart" resname="ctype.klimadashboard_chart">
+				<source>Klimadashboard chart</source>
+			</trans-unit>
+			<trans-unit id="ctype.klimadashboard_chart.description" resname="ctype.klimadashboard_chart.description">
+				<source>Embed a chart from klimadashboard.de, .at or .org.</source>
+			</trans-unit>
+			<trans-unit id="tab.chart" resname="tab.chart">
+				<source>Chart</source>
+			</trans-unit>
+			<trans-unit id="palette.source" resname="palette.source">
+				<source>Source</source>
+			</trans-unit>
+			<trans-unit id="palette.region" resname="palette.region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="palette.display" resname="palette.display">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_site" resname="tt_content.tx_klimadashboard_site">
+				<source>Klimadashboard site</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_site.description" resname="tt_content.tx_klimadashboard_site.description">
+				<source>Which Klimadashboard the chart is loaded from. Some charts exist only on one site.</source>
+			</trans-unit>
+			<trans-unit id="site.default" resname="site.default">
+				<source>Default (extension configuration)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_chart" resname="tt_content.tx_klimadashboard_chart">
+				<source>Chart</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_chart.description" resname="tt_content.tx_klimadashboard_chart.description">
+				<source>List loaded from Klimadashboard and cached.</source>
+			</trans-unit>
+			<trans-unit id="chart.select" resname="chart.select">
+				<source>– Please select a chart –</source>
+			</trans-unit>
+			<trans-unit id="chart.group.site" resname="chart.group.site">
+				<source>Charts for this site</source>
+			</trans-unit>
+			<trans-unit id="chart.group.general" resname="chart.group.general">
+				<source>Charts for all sites</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_language" resname="tt_content.tx_klimadashboard_language">
+				<source>Language</source>
+			</trans-unit>
+			<trans-unit id="language.page" resname="language.page">
+				<source>Same as page</source>
+			</trans-unit>
+			<trans-unit id="language.de" resname="language.de">
+				<source>German</source>
+			</trans-unit>
+			<trans-unit id="language.en" resname="language.en">
+				<source>English</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_region" resname="tt_content.tx_klimadashboard_region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_region.description" resname="tt_content.tx_klimadashboard_region.description">
+				<source>Preselects a region for charts with regional data.</source>
+			</trans-unit>
+			<trans-unit id="region.none" resname="region.none">
+				<source>None (chart default)</source>
+			</trans-unit>
+			<trans-unit id="region.group.group" resname="region.group.group">
+				<source>Regional associations</source>
+			</trans-unit>
+			<trans-unit id="region.group.state" resname="region.group.state">
+				<source>States</source>
+			</trans-unit>
+			<trans-unit id="region.group.district" resname="region.group.district">
+				<source>Districts and independent cities</source>
+			</trans-unit>
+			<trans-unit id="region.group.other" resname="region.group.other">
+				<source>Other</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_region_custom" resname="tt_content.tx_klimadashboard_region_custom">
+				<source>Other region (ID)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_region_custom.description" resname="tt_content.tx_klimadashboard_region_custom.description">
+				<source>Optional, e.g. for municipalities. Overrides the selection.</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_skin" resname="tt_content.tx_klimadashboard_skin">
+				<source>Design skin</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_skin.description" resname="tt_content.tx_klimadashboard_skin.description">
+				<source>Fonts, accent colour and logos of the embed.</source>
+			</trans-unit>
+			<trans-unit id="skin.default" resname="skin.default">
+				<source>Klimadashboard (default)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_options" resname="tt_content.tx_klimadashboard_options">
+				<source>Chart options</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_options.description" resname="tt_content.tx_klimadashboard_options.description">
+				<source>Settings offered by the selected chart.</source>
+			</trans-unit>
+			<trans-unit id="options.selectChart" resname="options.selectChart">
+				<source>Select a chart and save to see its options.</source>
+			</trans-unit>
+			<trans-unit id="options.none" resname="options.none">
+				<source>This chart has no further options.</source>
+			</trans-unit>
+			<trans-unit id="options.default" resname="options.default">
+				<source>Default (%s)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_hidetext" resname="tt_content.tx_klimadashboard_hidetext">
+				<source>Hide explanatory text</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_height" resname="tt_content.tx_klimadashboard_height">
+				<source>Fixed height (px)</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_height.description" resname="tt_content.tx_klimadashboard_height.description">
+				<source>0 = height adapts to the chart automatically.</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_consent" resname="tt_content.tx_klimadashboard_consent">
+				<source>Load on click</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_consent.description" resname="tt_content.tx_klimadashboard_consent.description">
+				<source>Shows a privacy notice and loads the chart only after a click.</source>
+			</trans-unit>
+			<trans-unit id="consent.inherit" resname="consent.inherit">
+				<source>Default (extension configuration)</source>
+			</trans-unit>
+			<trans-unit id="consent.on" resname="consent.on">
+				<source>Yes</source>
+			</trans-unit>
+			<trans-unit id="consent.off" resname="consent.off">
+				<source>No, load directly</source>
+			</trans-unit>
+			<trans-unit id="item.unavailable" resname="item.unavailable">
+				<source>[not available: %s]</source>
+			</trans-unit>
+			<trans-unit id="preview.noChart" resname="preview.noChart">
+				<source>No chart selected</source>
+			</trans-unit>
+			<trans-unit id="extconf.baseUrlDe" resname="extconf.baseUrlDe">
+				<source>URL of klimadashboard.de</source>
+			</trans-unit>
+			<trans-unit id="extconf.baseUrlAt" resname="extconf.baseUrlAt">
+				<source>URL of klimadashboard.at</source>
+			</trans-unit>
+			<trans-unit id="extconf.baseUrlOrg" resname="extconf.baseUrlOrg">
+				<source>URL of klimadashboard.org</source>
+			</trans-unit>
+			<trans-unit id="extconf.defaultSite" resname="extconf.defaultSite">
+				<source>Default Klimadashboard site</source>
+			</trans-unit>
+			<trans-unit id="extconf.directusUrl" resname="extconf.directusUrl">
+				<source>Klimadashboard data API (Directus)</source>
+			</trans-unit>
+			<trans-unit id="extconf.cacheLifetime" resname="extconf.cacheLifetime">
+				<source>Cache lifetime of API responses in seconds</source>
+			</trans-unit>
+			<trans-unit id="extconf.regionLayers" resname="extconf.regionLayers">
+				<source>Region levels offered in the region select (group, state, district, municipality)</source>
+			</trans-unit>
+			<trans-unit id="extconf.regionCountries" resname="extconf.regionCountries">
+				<source>Countries offered in the region select</source>
+			</trans-unit>
+			<trans-unit id="extconf.skins" resname="extconf.skins">
+				<source>Design skins (id:Label, comma separated); merged with the list from Klimadashboard</source>
+			</trans-unit>
+			<trans-unit id="extconf.fetchSkins" resname="extconf.fetchSkins">
+				<source>Load available skins from Klimadashboard (/api/skins)</source>
+			</trans-unit>
+			<trans-unit id="extconf.consent" resname="extconf.consent">
+				<source>Load charts only after a click (two-click privacy mode) by default</source>
+			</trans-unit>
+			<trans-unit id="extconf.privacyUrl" resname="extconf.privacyUrl">
+				<source>Privacy policy linked in the click-to-load notice</source>
+			</trans-unit>
+			<trans-unit id="extconf.excludeChartTypes" resname="extconf.excludeChartTypes">
+				<source>Chart types hidden from the chart select (comma separated, wildcards allowed)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

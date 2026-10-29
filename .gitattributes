@@ -1,0 +1,4 @@
+/.ddev export-ignore
+/dev export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore

@@ -1,0 +1,5 @@
+name: klimadashboard/demo-site
+label: Klimadashboard demo site
+dependencies:
+  - typo3/fluid-styled-content
+  - klimadashboard/klimadashboard
