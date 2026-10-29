@@ -24,9 +24,11 @@ charts from [Klimadashboard](https://klimadashboard.org) (klimadashboard.de, .at
 
 Compatible with **TYPO3 11.5 LTS, 12.4 LTS, 13.4 LTS and 14.3 LTS**, PHP 7.4–8.4.
 
-| Frontend (auto-height) | Backend (chart tab) | Click-to-load |
-|---|---|---|
-| ![](Documentation/Images/frontend-demo.jpg) | ![](Documentation/Images/backend-chart-tab.jpg) | ![](Documentation/Images/click-to-load.jpg) |
+| Frontend (auto-height) | Editing form (Chart tab) |
+|---|---|
+| ![](Documentation/Images/frontend-demo.jpg) | ![](Documentation/Images/backend-chart-tab.jpg) |
+| **Page module preview** | **Click-to-load** |
+| ![](Documentation/Images/backend-page-module.jpg) | ![](Documentation/Images/click-to-load.jpg) |
 
 **Test status:** tested end to end on **TYPO3 14.3 / PHP 8.4** and **TYPO3 11.5.41 / PHP 8.1** (DDEV setup
 below): frontend, auto-height, click-to-load, editing form, saving, page module preview, new content element

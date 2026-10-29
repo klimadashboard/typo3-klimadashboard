@@ -9,6 +9,7 @@ use Klimadashboard\Typo3\Service\EmbedUrlBuilder;
 use Klimadashboard\Typo3\Service\KlimadashboardApi;
 use Klimadashboard\Typo3\Service\Settings;
 use TYPO3\CMS\Backend\Form\Element\AbstractFormElement;
+use TYPO3\CMS\Core\Information\Typo3Version;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
@@ -76,10 +77,14 @@ class EmbedOptionsElement extends AbstractFormElement
         $fieldInformationResult = $this->renderFieldInformation();
         $resultArray = $this->mergeChildReturnIntoExistingResult($resultArray, $fieldInformationResult, false);
 
-        $resultArray['html'] = '<div class="formengine-field-item t3js-formengine-field-item">'
+        $html = '<div class="formengine-field-item t3js-formengine-field-item">'
             . $fieldInformationResult['html']
             . '<div class="form-wizards-wrap"><div class="form-wizards-element">' . $html . '</div></div>'
             . '</div>';
+        // TYPO3 v14 elements render their own label; before, the surrounding container did
+        $resultArray['html'] = GeneralUtility::makeInstance(Typo3Version::class)->getMajorVersion() >= 14
+            ? $this->wrapWithFieldsetAndLegend($html)
+            : $html;
         return $resultArray;
     }
 
