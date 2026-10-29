@@ -28,14 +28,15 @@ Compatible with **TYPO3 11.5 LTS, 12.4 LTS, 13.4 LTS and 14.3 LTS**, PHP 7.4–8
 |---|---|---|
 | ![](Documentation/Images/frontend-demo.jpg) | ![](Documentation/Images/backend-chart-tab.jpg) | ![](Documentation/Images/click-to-load.jpg) |
 
-**Test status:** tested end to end on TYPO3 14.3 / PHP 8.4 (DDEV setup below). The code is written for
-11.5–13.4 (version switches for select items, number fields, wizard TSconfig and preview records) and passes
-PHP 7.4 lint, but it has **not yet been run** on 11.5, 12.4 or 13.4.
+**Test status:** tested end to end on **TYPO3 14.3 / PHP 8.4** and **TYPO3 11.5.41 / PHP 8.1** (DDEV setup
+below): frontend, auto-height, click-to-load, editing form, saving, page module preview, new content element
+wizard. 12.4 and 13.4 are covered by the same version switches but have not been run. The code passes PHP 7.4 lint.
 
 ### Known limitations (depend on klimadashboard-core)
 
 - `/api/embed-options` and `/api/skins` are not on production yet. Until they are deployed, the chart options
-  field shows "no further options" and the skin select shows the configured list. Stored values still work.
+  field offers no selects and the skin select shows the configured list. Options already stored on an element
+  are listed and kept when it is saved.
 - The `skin` parameter has no effect until the skin feature is deployed in core.
 - `lang=en`: the embed route currently uses `lang` only for its server-rendered snapshot, so the interactive chart stays German.
 
@@ -104,16 +105,25 @@ configured list. Existing elements keep their stored values.
 ## Local test environment (DDEV)
 
 Requirements: [DDEV](https://ddev.com) with a Docker provider (e.g. Colima, OrbStack or Docker Desktop).
-The DDEV project lives in the repository root; the TYPO3 composer project is in `dev/`. That project
-installs this extension from `../` as a symlinked path repository, together with a minimal site
-package (`dev/packages/demo_site`).
+The DDEV project lives in the repository root. There are two TYPO3 composer projects, `dev/v14` (TYPO3 14.3,
+PHP 8.4) and `dev/v11` (TYPO3 11.5, PHP 8.1, the version of the Metropolregion Nürnberg website). Both
+install this extension from `../../` as a symlinked path repository, together with a minimal site package
+(`dev/packages/demo_site`).
 
 ```bash
-dev/setup.sh            # first run: TYPO3 14.3, admin user, demo pages (re-run to reset)
-ddev start              # later
+dev/setup.sh            # TYPO3 14.3: install, admin user, demo pages (re-run to reset)
+dev/setup.sh 11         # switch to TYPO3 11.5 (resets the database)
+ddev start              # later: start the version set up last
 ddev stop               # stop the containers
 ddev delete -O          # remove containers and database
 ```
+
+`setup.sh` switches versions by writing `.ddev/config.local.yaml` (composer root, docroot, PHP version).
+TYPO3 v11 is installed with `helhum/typo3-console` and includes the TypoScript through a template record;
+v14 uses site sets.
+
+> **v11 is for local testing only.** The last public 11.5 release (11.5.41) has security advisories that are
+> fixed only in paid ELTS releases, so `dev/v11/composer.json` disables Composer's advisory block. Never deploy it.
 
 The project uses the TLD `.localhost` (resolves to 127.0.0.1 without /etc/hosts or DNS changes);
 `ddev describe` shows the exact port (here: 30000).
@@ -123,7 +133,8 @@ The project uses the TLD `.localhost` (resolves to 127.0.0.1 without /etc/hosts 
 - **Admin login:** `setup.sh` generates local-only test credentials and stores them in `dev/.env.local`
   (git-ignored). Read them with `cat dev/.env.local`.
 
-The demo content is in `dev/demo/content.sql`. Clear the API cache with `ddev exec --dir /var/www/html/dev vendor/bin/typo3 cache:flush`.
+The demo content is in `dev/demo/`. Clear the API cache with `ddev exec --dir /var/www/html/dev/v14 vendor/bin/typo3 cache:flush`
+(v11: `--dir /var/www/html/dev/v11 vendor/bin/typo3cms cache:flush`).
 
 ## Publishing (not done yet)
 

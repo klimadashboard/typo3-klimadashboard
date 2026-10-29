@@ -1,0 +1,59 @@
+{
+	"name": "klimadashboard/typo3-klimadashboard-dev-v11",
+	"description": "Local TYPO3 11.5 test environment for the Klimadashboard extension (DDEV)",
+	"type": "project",
+	"license": "GPL-2.0-or-later",
+	"repositories": [
+		{
+			"type": "path",
+			"url": "../../",
+			"options": {
+				"symlink": true
+			}
+		},
+		{
+			"type": "path",
+			"url": "../packages/*",
+			"options": {
+				"symlink": true
+			}
+		}
+	],
+	"require": {
+		"helhum/typo3-console": "^7.1",
+		"klimadashboard/typo3-klimadashboard": "@dev",
+		"klimadashboard/demo-site": "@dev",
+		"typo3/cms-backend": "^11.5",
+		"typo3/cms-belog": "^11.5",
+		"typo3/cms-core": "^11.5",
+		"typo3/cms-extbase": "^11.5",
+		"typo3/cms-fluid": "^11.5",
+		"typo3/cms-fluid-styled-content": "^11.5",
+		"typo3/cms-frontend": "^11.5",
+		"typo3/cms-install": "^11.5",
+		"typo3/cms-lowlevel": "^11.5",
+		"typo3/cms-setup": "^11.5",
+		"typo3/cms-tstemplate": "^11.5"
+	},
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"config": {
+		"allow-plugins": {
+			"helhum/typo3-console-plugin": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"sort-packages": true,
+		"platform": {
+			"php": "8.1.0"
+		},
+		"policy": {
+			"advisories": {
+				"block": false
+			}
+		}
+	},
+	"extra": {
+		"comment": "Local test environment only: public TYPO3 11.5.41 has advisories fixed only in ELTS, so Composer's advisory block is disabled here. Never deploy this project."
+	}
+}

@@ -177,6 +177,9 @@
 			<trans-unit id="extconf.excludeChartTypes" resname="extconf.excludeChartTypes">
 				<source>Chart types hidden from the chart select (comma separated, wildcards allowed)</source>
 			</trans-unit>
+			<trans-unit id="options.stored" resname="options.stored">
+				<source>Further stored parameters (kept):</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

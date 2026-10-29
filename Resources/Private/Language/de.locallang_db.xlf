@@ -235,6 +235,10 @@
 				<source>Chart types hidden from the chart select (comma separated, wildcards allowed)</source>
 				<target>In der Grafikauswahl ausgeblendete Grafiktypen (kommagetrennt, Platzhalter erlaubt)</target>
 			</trans-unit>
+			<trans-unit id="options.stored" resname="options.stored" approved="yes">
+				<source>Further stored parameters (kept):</source>
+				<target>Weitere gespeicherte Parameter (bleiben erhalten):</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

@@ -63,6 +63,16 @@ class EmbedOptionsElement extends AbstractFormElement
             $html .= '</select></div>';
         }
 
+        // Keep stored parameters the API does not (or no longer) offer, e.g. while it is unreachable
+        $unlisted = array_diff_key($values, array_flip(array_column($options, 'key')));
+        if ($unlisted !== []) {
+            $html .= '<p class="text-body-secondary text-muted">' . htmlspecialchars($this->translate('options.stored')) . ' <code>'
+                . htmlspecialchars(http_build_query($unlisted, '', '&', PHP_QUERY_RFC3986)) . '</code></p>';
+            foreach ($unlisted as $key => $value) {
+                $html .= '<input type="hidden" name="' . htmlspecialchars($name . '[' . $key . ']') . '" value="' . htmlspecialchars($value) . '">';
+            }
+        }
+
         $fieldInformationResult = $this->renderFieldInformation();
         $resultArray = $this->mergeChildReturnIntoExistingResult($resultArray, $fieldInformationResult, false);
 

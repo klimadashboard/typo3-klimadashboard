@@ -1,0 +1,13 @@
+page = PAGE
+page {
+    meta.viewport = width=device-width, initial-scale=1
+    includeCSS.demo = EXT:demo_site/Resources/Public/Css/demo.css
+    10 = COA
+    10 {
+        wrap = <main class="demo">|</main>
+        10 = TEXT
+        10.data = page:title
+        10.wrap = <h1>|</h1>
+        20 < styles.content.get
+    }
+}

@@ -1,8 +1,8 @@
-/dev/vendor/
-/dev/public/
-/dev/var/
-/dev/config/system/
-/dev/composer.lock
+/dev/v*/vendor/
+/dev/v*/public/
+/dev/v*/var/
+/dev/v*/config/system/
+/dev/v*/composer.lock
 /dev/.env.local
 /.ddev/*
 !/.ddev/config.yaml

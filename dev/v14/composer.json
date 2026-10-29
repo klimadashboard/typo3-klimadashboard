@@ -1,11 +1,23 @@
 {
-	"name": "klimadashboard/typo3-klimadashboard-dev",
-	"description": "Local TYPO3 test environment for the Klimadashboard extension (DDEV)",
+	"name": "klimadashboard/typo3-klimadashboard-dev-v14",
+	"description": "Local TYPO3 14.3 test environment for the Klimadashboard extension (DDEV)",
 	"type": "project",
 	"license": "GPL-2.0-or-later",
 	"repositories": [
-		{ "type": "path", "url": "../", "options": { "symlink": true } },
-		{ "type": "path", "url": "packages/*", "options": { "symlink": true } }
+		{
+			"type": "path",
+			"url": "../../",
+			"options": {
+				"symlink": true
+			}
+		},
+		{
+			"type": "path",
+			"url": "../packages/*",
+			"options": {
+				"symlink": true
+			}
+		}
 	],
 	"require": {
 		"klimadashboard/typo3-klimadashboard": "@dev",

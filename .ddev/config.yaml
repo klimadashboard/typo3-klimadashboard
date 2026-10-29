@@ -1,6 +1,6 @@
 name: klimadashboard-typo3
 type: typo3
-docroot: dev/public
+docroot: dev/v14/public
 php_version: "8.4"
 webserver_type: apache-fpm
 xdebug_enabled: false
@@ -13,7 +13,7 @@ upload_dirs:
     - fileadmin
 project_tld: localhost
 use_dns_when_possible: true
-composer_root: dev
+composer_root: dev/v14
 composer_version: "2"
 web_environment:
     - TYPO3_CONTEXT=Development

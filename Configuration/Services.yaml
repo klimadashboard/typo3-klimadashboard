@@ -6,6 +6,8 @@ services:
 
   Klimadashboard\Typo3\:
     resource: '../Classes/*'
+    # FormEngine nodes are registered per TYPO3 version in Services.php
+    exclude: '../Classes/Form/Element/*'
 
   # Instantiated via GeneralUtility::makeInstance() by FormEngine, DataHandler and TypoScript
   Klimadashboard\Typo3\Service\Settings:
@@ -20,9 +22,6 @@ services:
     public: true
   Klimadashboard\Typo3\Hooks\DataHandlerHook:
     public: true
-  Klimadashboard\Typo3\Form\Element\EmbedOptionsElement:
-    public: true
-    shared: false
   Klimadashboard\Typo3\Preview\ChartPreviewRenderer:
     public: true
     shared: false
