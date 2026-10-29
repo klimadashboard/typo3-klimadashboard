@@ -13,7 +13,7 @@ jobs:
       matrix:
         php: ['7.4', '8.0', '8.1', '8.2', '8.3', '8.4']
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
@@ -33,7 +33,7 @@ jobs:
     name: XLIFF
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: sudo apt-get update -qq && sudo apt-get install -y -qq libxml2-utils
       - run: xmllint --noout Resources/Private/Language/*.xlf
 
@@ -41,7 +41,7 @@ jobs:
     name: Documentation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Render documentation (fails on warnings)
         run: |
           docker run --rm -v "$PWD":/project ghcr.io/typo3-documentation/render-guides:latest \
