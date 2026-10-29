@@ -14,11 +14,12 @@ defined('TYPO3') or die();
             : [$label, $value, $icon, $group];
     };
 
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
-        'tt_content',
-        'CType',
-        $item($lll . 'ctype.klimadashboard_chart', 'klimadashboard_chart', 'klimadashboard-chart', 'plugins')
-    );
+    $contentType = $item($lll . 'ctype.klimadashboard_chart', 'klimadashboard_chart', 'klimadashboard-chart', 'plugins');
+    if ($typo3Version >= 13) {
+        // Shown in the new content element wizard, which TYPO3 v13+ builds from TCA
+        $contentType['description'] = $lll . 'ctype.klimadashboard_chart.description';
+    }
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content', 'CType', $contentType);
     $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['klimadashboard_chart'] = 'klimadashboard-chart';
 
     $columns = [

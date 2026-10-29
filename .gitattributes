@@ -2,3 +2,5 @@
 /dev export-ignore
 /.gitattributes export-ignore
 /.gitignore export-ignore
+/.github export-ignore
+/Documentation-GENERATED-temp export-ignore

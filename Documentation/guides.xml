@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guides xmlns="https://www.phpdoc.org/guides"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://www.phpdoc.org/guides ../vendor/phpdocumentor/guides-cli/resources/schema/guides.xsd"
+        links-are-relative="true">
+    <extension class="\T3Docs\Typo3DocsTheme\DependencyInjection\Typo3DocsThemeExtension"
+               project-home="https://klimadashboard.org"
+               project-contact="mailto:team@klimadashboard.org"
+               project-repository="https://github.com/klimadashboard/typo3-klimadashboard"
+               project-issues="https://github.com/klimadashboard/typo3-klimadashboard/issues"
+               edit-on-github="klimadashboard/typo3-klimadashboard"
+               edit-on-github-branch="main"
+               interlink-shortcode="klimadashboard/typo3-klimadashboard"
+               typo3-core-preferred="stable"
+    />
+    <project title="Klimadashboard" release="1.0.0" version="1.0" copyright="since 2026 by Klimadashboard"/>
+</guides>

@@ -2,9 +2,11 @@
 # Sets up the local TYPO3 demo for the Klimadashboard extension with DDEV.
 #
 #   dev/setup.sh        TYPO3 14.3 (default)
+#   dev/setup.sh 13     TYPO3 13.4
+#   dev/setup.sh 12     TYPO3 12.4
 #   dev/setup.sh 11     TYPO3 11.5
 #
-# Both versions share one DDEV project; switching rewrites .ddev/config.local.yaml and
+# All versions share one DDEV project; switching rewrites .ddev/config.local.yaml and
 # resets the database. Re-running resets the admin user and demo content.
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -12,8 +14,10 @@ cd "$(dirname "$0")/.."
 VERSION="${1:-14}"
 case "$VERSION" in
 	14) PHP_VERSION=8.4 ;;
+	13) PHP_VERSION=8.3 ;;
+	12) PHP_VERSION=8.2 ;;
 	11) PHP_VERSION=8.1 ;;
-	*) echo "Usage: $0 [11|14]" >&2; exit 1 ;;
+	*) echo "Usage: $0 [11|12|13|14]" >&2; exit 1 ;;
 esac
 ROOT="dev/v$VERSION"
 CONTAINER_ROOT="/var/www/html/$ROOT"
@@ -47,7 +51,7 @@ if [ "$VERSION" = 11 ]; then
 		--site-name="Klimadashboard TYPO3 Demo (v11)" --site-setup-type=no --web-server-config=apache
 	ddev exec --dir "$CONTAINER_ROOT" vendor/bin/typo3cms extension:setup
 	ddev mysql < dev/demo/content.sql
-	ddev mysql < dev/demo/sys_template_v11.sql
+	ddev mysql < dev/demo/sys_template.sql
 	ddev exec --dir "$CONTAINER_ROOT" vendor/bin/typo3cms cache:flush
 else
 	ddev exec --dir "$CONTAINER_ROOT" vendor/bin/typo3 setup --no-interaction --force \
@@ -57,6 +61,10 @@ else
 		--server-type=apache
 	ddev exec --dir "$CONTAINER_ROOT" vendor/bin/typo3 extension:setup
 	ddev mysql < dev/demo/content.sql
+	if [ "$VERSION" = 12 ]; then
+		# No site sets before TYPO3 v13: include the TypoScript through a template record
+		ddev mysql < dev/demo/sys_template.sql
+	fi
 	ddev exec --dir "$CONTAINER_ROOT" vendor/bin/typo3 cache:flush
 fi
 

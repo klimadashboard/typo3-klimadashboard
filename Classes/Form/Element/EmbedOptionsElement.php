@@ -81,8 +81,8 @@ class EmbedOptionsElement extends AbstractFormElement
             . $fieldInformationResult['html']
             . '<div class="form-wizards-wrap"><div class="form-wizards-element">' . $html . '</div></div>'
             . '</div>';
-        // TYPO3 v14 elements render their own label; before, the surrounding container did
-        $resultArray['html'] = GeneralUtility::makeInstance(Typo3Version::class)->getMajorVersion() >= 14
+        // TYPO3 v13+ elements render their own label; before, the surrounding container did
+        $resultArray['html'] = GeneralUtility::makeInstance(Typo3Version::class)->getMajorVersion() >= 13
             ? $this->wrapWithFieldsetAndLegend($html)
             : $html;
         return $resultArray;
