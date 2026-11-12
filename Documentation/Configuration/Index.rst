@@ -45,8 +45,14 @@ Extension configuration
         -   Additional design skins, as `id:Label`, comma separated, e.g.
             `my-skin:My organisation`.
     *   -   `fetchSkins`
+        -   off
+        -   Also load the list of skins from Klimadashboard. Off by default
+            because `/api/skins` is not deployed on the Klimadashboard sites
+            yet; turn it on once it is.
+    *   -   `backendPreview`
         -   on
-        -   Also load the list of skins from Klimadashboard.
+        -   Show a live preview of the chart in the editing form. The preview is
+            loaded from Klimadashboard with the editor's browser.
     *   -   `consent`
         -   off
         -   Load charts only after a click by default.

@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use Klimadashboard\Typo3\Form\Element\ChartPreviewElement;
 use Klimadashboard\Typo3\Form\Element\EmbedOptionsElement;
 use Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator;
 use TYPO3\CMS\Core\Information\Typo3Version;
@@ -10,11 +11,13 @@ use TYPO3\CMS\Core\Information\Typo3Version;
 // v11/v12 pass NodeFactory and data to the constructor and must not autowire them.
 return static function (ContainerConfigurator $container): void {
     if ((new Typo3Version())->getMajorVersion() >= 13) {
-        $container->services()
-            ->set(EmbedOptionsElement::class)
-            ->autowire()
-            ->autoconfigure()
-            ->public()
-            ->share(false);
+        $services = $container->services();
+        foreach ([EmbedOptionsElement::class, ChartPreviewElement::class] as $element) {
+            $services->set($element)
+                ->autowire()
+                ->autoconfigure()
+                ->public()
+                ->share(false);
+        }
     }
 };

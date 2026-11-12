@@ -15,6 +15,20 @@ Insert a chart
 #.  Optionally enter a header on the :guilabel:`General` tab.
 #.  Open the :guilabel:`Chart` tab and choose a chart. Save to see the options
     of the chosen chart.
+#.  The :guilabel:`Preview` at the bottom of the tab shows the chart as it will
+    appear on the site, and follows the fields above while you edit.
+
+Preview
+=======
+
+The :guilabel:`Preview` shows the selected chart with the settings currently in
+the form — you do not have to save first. :guilabel:`Reload preview` fetches it
+again, :guilabel:`Open in a new tab` opens the embed on Klimadashboard.
+
+The preview is shown at a fixed height. On the site the height adapts to the
+chart unless :guilabel:`Fixed height (px)` is set. The chart is loaded from
+klimadashboard.de/.at/.org with your browser; an administrator can switch the
+preview off with the `backendPreview` setting.
 
 Fields on the Chart tab
 =======================
@@ -51,6 +65,8 @@ Fields on the Chart tab
     *   -   Load on click
         -   Shows a privacy notice and loads the chart only after a click.
             "Default" follows the extension configuration.
+    *   -   Preview
+        -   The chart as it will appear on the site, see above. Not a setting.
 
 The page module shows the chart title, region and skin of each element, with a
 link to the chart on Klimadashboard.

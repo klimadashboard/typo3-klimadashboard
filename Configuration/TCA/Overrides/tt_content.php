@@ -5,7 +5,14 @@ defined('TYPO3') or die();
 (static function (): void {
     $lll = 'LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:';
     $tabs = 'LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:';
+    // "appearance" was added to the core tab labels in TYPO3 v13; fluid_styled_content's
+    // own label exists in every supported version, so the tab keeps its name on v11/v12 too.
+    $appearanceTab = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance';
     $typo3Version = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class)->getMajorVersion();
+    // Reads the extension configuration only; the field is left out of the form when the preview is off
+    $previewEnabled = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+        \Klimadashboard\Typo3\Service\Settings::class
+    )->isBackendPreviewEnabled();
 
     // TYPO3 v12+ uses associative select items, v11 numeric ones
     $item = static function (string $label, string $value, ?string $icon = null, ?string $group = null) use ($typo3Version): array {
@@ -55,6 +62,9 @@ defined('TYPO3') or die();
                 ],
                 'itemsProcFunc' => \Klimadashboard\Typo3\Form\ItemsProcFunc::class . '->charts',
                 'default' => '',
+                // The items come from the API, so the list can be empty while it is unreachable.
+                // Without this, TYPO3 v14 drops the field from the form instead of showing it empty.
+                'showIfEmpty' => true,
             ],
         ],
         'tx_klimadashboard_language' => [
@@ -87,6 +97,7 @@ defined('TYPO3') or die();
                 ],
                 'itemsProcFunc' => \Klimadashboard\Typo3\Form\ItemsProcFunc::class . '->regions',
                 'default' => '',
+                'showIfEmpty' => true,
             ],
         ],
         'tx_klimadashboard_region_custom' => [
@@ -111,6 +122,7 @@ defined('TYPO3') or die();
                 ],
                 'itemsProcFunc' => \Klimadashboard\Typo3\Form\ItemsProcFunc::class . '->skins',
                 'default' => '',
+                'showIfEmpty' => true,
             ],
         ],
         'tx_klimadashboard_options' => [
@@ -119,6 +131,14 @@ defined('TYPO3') or die();
             'config' => [
                 'type' => 'text',
                 'renderType' => 'klimadashboardEmbedOptions',
+            ],
+        ],
+        // Not a database column: the element only renders the preview of the current form values
+        'tx_klimadashboard_preview' => [
+            'label' => $lll . 'tt_content.tx_klimadashboard_preview',
+            'config' => [
+                'type' => 'user',
+                'renderType' => 'klimadashboardChartPreview',
             ],
         ],
         'tx_klimadashboard_hidetext' => [
@@ -176,8 +196,9 @@ defined('TYPO3') or die();
                 tx_klimadashboard_chart,
                 --palette--;;klimadashboard_region,
                 tx_klimadashboard_options,
-                --palette--;;klimadashboard_display,
-            --div--;' . $tabs . 'appearance,
+                --palette--;;klimadashboard_display,' . ($previewEnabled ? '
+                tx_klimadashboard_preview,' : '') . '
+            --div--;' . $appearanceTab . ',
                 --palette--;;frames,
                 --palette--;;appearanceLinks,
             --div--;' . $tabs . 'language,

@@ -21,7 +21,10 @@ regionCountries = DE,AT
 # cat=Skins; type=string; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.skins
 skins =
 # cat=Skins; type=boolean; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.fetchSkins
-fetchSkins = 1
+fetchSkins = 0
+
+# cat=Backend; type=boolean; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.backendPreview
+backendPreview = 1
 
 # cat=Privacy; type=boolean; label=LLL:EXT:klimadashboard/Resources/Private/Language/locallang_db.xlf:extconf.consent
 consent = 0

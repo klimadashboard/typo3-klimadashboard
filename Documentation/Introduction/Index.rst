@@ -20,7 +20,8 @@ Features
     fixed height and click-to-load.
 *   **Automatic height**: the chart reports its height, and the iframe adapts.
 *   **No HTML rights** needed for editors; the page module shows a preview.
-*   **Privacy**: no cookies, no tracking, optional two-click mode.
+*   **Privacy**: no cookies, optional two-click mode. The embed reports the view
+    to Klimadashboard's own analytics, see :ref:`privacy`.
 *   **Content Security Policy**: the allowance for the Klimadashboard domains is
     added automatically on TYPO3 v12+.
 

@@ -7,7 +7,7 @@
 				<source>Klimadashboard chart</source>
 			</trans-unit>
 			<trans-unit id="consent.text" resname="consent.text">
-				<source>This chart is loaded from %s. Loading it transmits your IP address to the operator. No cookies are set.</source>
+				<source>This chart is loaded from %s. Loading it transmits your IP address to the operator and records the view in the operator's usage statistics. No cookies are set.</source>
 			</trans-unit>
 			<trans-unit id="consent.button" resname="consent.button">
 				<source>Load chart</source>

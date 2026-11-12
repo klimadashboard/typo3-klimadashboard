@@ -16,6 +16,12 @@ defined('TYPO3') or die();
         'class' => \Klimadashboard\Typo3\Form\Element\EmbedOptionsElement::class,
     ];
 
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['formEngine']['nodeRegistry'][1763000000] = [
+        'nodeName' => 'klimadashboardChartPreview',
+        'priority' => 40,
+        'class' => \Klimadashboard\Typo3\Form\Element\ChartPreviewElement::class,
+    ];
+
     $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['klimadashboard']
         = \Klimadashboard\Typo3\Hooks\DataHandlerHook::class;
 

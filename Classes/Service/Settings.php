@@ -112,9 +112,22 @@ class Settings implements SingletonInterface
         return $skins;
     }
 
+    /**
+     * Off by default: GET /api/skins is not deployed on the Klimadashboard sites yet and
+     * answers 404, so asking for it would only cost a request per cache lifetime.
+     */
     public function shouldFetchSkins(): bool
     {
-        return (bool)($this->configuration['fetchSkins'] ?? true);
+        return (bool)($this->configuration['fetchSkins'] ?? false);
+    }
+
+    /**
+     * Live preview of the chart in the editing form. Loading it fetches the embed from
+     * klimadashboard.* with the editor's browser, so it can be switched off.
+     */
+    public function isBackendPreviewEnabled(): bool
+    {
+        return (bool)($this->configuration['backendPreview'] ?? true);
     }
 
     public function isConsentEnabled(): bool

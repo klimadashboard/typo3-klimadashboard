@@ -9,17 +9,22 @@ charts from [Klimadashboard](https://klimadashboard.org) (klimadashboard.de, .at
   region (regional associations, states, districts and independent cities, or any region ID),
   chart-specific options (e.g. *vehicle stock* vs. *new registrations*), design skin, hiding the explanatory text,
   automatic or fixed height, click-to-load.
+- **Live preview while editing:** the Chart tab shows the chart as it will appear on the site and follows
+  the form — chart, region, options, skin, text and height — without saving. Can be switched off
+  (`backendPreview`).
 - **Editors need no HTML rights.** The page module shows a preview with chart, region and skin.
 - **Auto-height:** the chart's iframe reports its height through `postMessage`, and a small script in the
   extension resizes it (sender origin and frame are checked). No external scripts are loaded.
 - **Accessibility (WCAG 2.1 AA):** the iframe gets the chart title as an accessible name and a `lang`
   attribute. The charts provide their own text alternatives and table views. The click-to-load button is
   keyboard-operable and moves focus to the chart after loading.
-- **Privacy (DSGVO):** no cookies and no tracking. The chart is loaded from klimadashboard.* (EU hosting),
-  which transmits the visitor's IP address to Klimadashboard. A two-click mode (optional, global or per
-  element) loads the chart only after consent.
+- **Privacy (DSGVO):** no cookies. The chart is loaded from klimadashboard.* (EU hosting), which
+  transmits the visitor's IP address to Klimadashboard; the embed also reports the view to
+  Klimadashboard's own analytics (`analytics.klimadashboard.org`), without cookies. A two-click mode
+  (optional, global or per element) loads the chart only after consent.
 - **Content Security Policy:** on TYPO3 v12+ the extension adds `frame-src` for the Klimadashboard
-  domains automatically (`Configuration/ContentSecurityPolicies.php`). On v11, add
+  domains automatically, for the frontend and for the backend (which the live preview needs)
+  (`Configuration/ContentSecurityPolicies.php`). On v11, add
   `frame-src https://klimadashboard.de https://klimadashboard.at https://klimadashboard.org` to your policy.
 
 Compatible with **TYPO3 11.5 LTS, 12.4 LTS, 13.4 LTS and 14.3 LTS**, PHP 7.4–8.4.
@@ -40,8 +45,9 @@ first TER release); changes are listed in [CHANGELOG.md](CHANGELOG.md).
 
 ### Known limitations (depend on klimadashboard-core)
 
-- `/api/skins` and the skin feature are not on production yet. Until they are deployed, the skin select
-  shows the configured list and the `skin` parameter has no visible effect.
+- `/api/skins` and the skin feature are not on production yet, so `fetchSkins` is off by default. Until
+  they are deployed, the skin select shows the configured `skins` list and the `skin` parameter has no
+  visible effect.
 - If `/api/embed-options` is unreachable, options already stored on an element are listed and kept when it is saved.
 - `lang=en`: the embed route currently uses `lang` only for its server-rendered snapshot, so the interactive chart stays German.
 
@@ -73,7 +79,8 @@ frames and layouts follow your site.
 | `excludeChartTypes` | `test*` | Chart types hidden from the picker |
 | `regionLayers` / `regionCountries` | `group,state,district` / `DE,AT` | Regions offered in the region select |
 | `skins` | (empty) | Additional skins (`id:Label`, comma separated, e.g. `my-skin:My organisation`) |
-| `fetchSkins` | on | Also load the skin list from `GET <defaultSite>/api/skins` |
+| `fetchSkins` | off | Also load the skin list from `GET <defaultSite>/api/skins` (not deployed yet) |
+| `backendPreview` | on | Live preview of the chart in the editing form |
 | `consent` | off | Two-click mode for all elements (elements can override) |
 | `privacyUrl` | Klimadashboard privacy policy | Linked in the click-to-load notice |
 
@@ -151,7 +158,7 @@ Releases are published from version tags (`1.0.0`, no `v` prefix):
 
 1. Update `version` in `ext_emconf.php`, `release` in `Documentation/guides.xml` and `CHANGELOG.md`.
 2. Commit, then create an annotated tag. Its message becomes the TER upload comment:
-   `git tag -a 1.0.1 -m "Fix …"` and `git push origin main 1.0.1`.
+   `git tag -a 1.1.0 -m "Fix …"` and `git push origin main 1.1.0`.
 3. `.github/workflows/publish.yml` checks that the tag matches `ext_emconf.php` and publishes to the TER
    with [tailor](https://github.com/TYPO3/tailor). Packagist updates through its GitHub webhook.
    docs.typo3.org renders `Documentation/` through its webhook.

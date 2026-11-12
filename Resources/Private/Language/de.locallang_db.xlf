@@ -220,8 +220,8 @@
 				<target>Design-Skins (id:Bezeichnung, kommagetrennt); ergänzt die Liste von Klimadashboard</target>
 			</trans-unit>
 			<trans-unit id="extconf.fetchSkins" resname="extconf.fetchSkins" approved="yes">
-				<source>Load available skins from Klimadashboard (/api/skins)</source>
-				<target>Verfügbare Skins von Klimadashboard laden (/api/skins)</target>
+				<source>Load available skins from Klimadashboard (/api/skins; not deployed yet)</source>
+				<target>Verfügbare Skins von Klimadashboard laden (/api/skins; noch nicht verfügbar)</target>
 			</trans-unit>
 			<trans-unit id="extconf.consent" resname="extconf.consent" approved="yes">
 				<source>Load charts only after a click (two-click privacy mode) by default</source>
@@ -238,6 +238,34 @@
 			<trans-unit id="options.stored" resname="options.stored" approved="yes">
 				<source>Further stored parameters (kept):</source>
 				<target>Weitere gespeicherte Parameter (bleiben erhalten):</target>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_preview" resname="tt_content.tx_klimadashboard_preview" approved="yes">
+				<source>Preview</source>
+				<target>Vorschau</target>
+			</trans-unit>
+			<trans-unit id="preview.frameTitle" resname="preview.frameTitle" approved="yes">
+				<source>Preview of the selected chart</source>
+				<target>Vorschau der ausgewählten Grafik</target>
+			</trans-unit>
+			<trans-unit id="preview.selectChart" resname="preview.selectChart" approved="yes">
+				<source>Select a chart to see a preview.</source>
+				<target>Wählen Sie eine Grafik, um eine Vorschau zu sehen.</target>
+			</trans-unit>
+			<trans-unit id="preview.reload" resname="preview.reload" approved="yes">
+				<source>Reload preview</source>
+				<target>Vorschau neu laden</target>
+			</trans-unit>
+			<trans-unit id="preview.open" resname="preview.open" approved="yes">
+				<source>Open in a new tab</source>
+				<target>In neuem Tab öffnen</target>
+			</trans-unit>
+			<trans-unit id="preview.note" resname="preview.note" approved="yes">
+				<source>The preview follows the settings above, is loaded from Klimadashboard and is not saved yet. It is shown at a fixed height; on the site the height adapts to the chart unless you set one.</source>
+				<target>Die Vorschau folgt den Einstellungen oben, wird von Klimadashboard geladen und ist noch nicht gespeichert. Sie hat eine feste Höhe; auf der Website passt sich die Höhe an die Grafik an, sofern Sie keine festlegen.</target>
+			</trans-unit>
+			<trans-unit id="extconf.backendPreview" resname="extconf.backendPreview" approved="yes">
+				<source>Show a live preview of the chart in the editing form</source>
+				<target>Live-Vorschau der Grafik im Bearbeitungsformular anzeigen</target>
 			</trans-unit>
 		</body>
 	</file>

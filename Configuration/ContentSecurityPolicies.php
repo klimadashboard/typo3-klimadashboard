@@ -21,9 +21,14 @@ $sources = array_map(
     GeneralUtility::makeInstance(Settings::class)->getAllowedOrigins()
 );
 
-return Map::fromEntries([
-    Scope::frontend(),
-    new MutationCollection(
-        new Mutation(MutationMode::Extend, Directive::FrameSrc, ...$sources),
-    ),
-]);
+$frameSrc = static function () use ($sources): MutationCollection {
+    return new MutationCollection(
+        new Mutation(MutationMode::Extend, Directive::FrameSrc, ...$sources)
+    );
+};
+
+return Map::fromEntries(
+    [Scope::frontend(), $frameSrc()],
+    // The editing form shows a live preview of the chart, so the backend needs the same allowance.
+    [Scope::backend(), $frameSrc()]
+);

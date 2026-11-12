@@ -166,7 +166,7 @@
 				<source>Design skins (id:Label, comma separated); merged with the list from Klimadashboard</source>
 			</trans-unit>
 			<trans-unit id="extconf.fetchSkins" resname="extconf.fetchSkins">
-				<source>Load available skins from Klimadashboard (/api/skins)</source>
+				<source>Load available skins from Klimadashboard (/api/skins; not deployed yet)</source>
 			</trans-unit>
 			<trans-unit id="extconf.consent" resname="extconf.consent">
 				<source>Load charts only after a click (two-click privacy mode) by default</source>
@@ -179,6 +179,27 @@
 			</trans-unit>
 			<trans-unit id="options.stored" resname="options.stored">
 				<source>Further stored parameters (kept):</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_klimadashboard_preview" resname="tt_content.tx_klimadashboard_preview">
+				<source>Preview</source>
+			</trans-unit>
+			<trans-unit id="preview.frameTitle" resname="preview.frameTitle">
+				<source>Preview of the selected chart</source>
+			</trans-unit>
+			<trans-unit id="preview.selectChart" resname="preview.selectChart">
+				<source>Select a chart to see a preview.</source>
+			</trans-unit>
+			<trans-unit id="preview.reload" resname="preview.reload">
+				<source>Reload preview</source>
+			</trans-unit>
+			<trans-unit id="preview.open" resname="preview.open">
+				<source>Open in a new tab</source>
+			</trans-unit>
+			<trans-unit id="preview.note" resname="preview.note">
+				<source>The preview follows the settings above, is loaded from Klimadashboard and is not saved yet. It is shown at a fixed height; on the site the height adapts to the chart unless you set one.</source>
+			</trans-unit>
+			<trans-unit id="extconf.backendPreview" resname="extconf.backendPreview">
+				<source>Show a live preview of the chart in the editing form</source>
 			</trans-unit>
 		</body>
 	</file>
